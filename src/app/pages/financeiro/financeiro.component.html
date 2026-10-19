@@ -1,0 +1,139 @@
+<app-menu></app-menu>
+
+    <main class="conteudo">
+        <header class="topo">
+            <input type="search" placeholder="Buscar no sistema...">
+            <p>Olá, Administrador</p>
+        </header>
+
+        <section class="cabecalho">
+            <div>
+                <h1>Financeiro</h1>
+                <p>Acompanhe o faturamento, despesas e o fluxo financeiro da loja.</p>
+            </div>
+
+            <select>
+                <option>Janeiro de 2026</option>
+                <option>Fevereiro de 2026</option>
+                <option>Março de 2026</option>
+                <option>Abril de 2026</option>
+                <option>Maio de 2026</option>
+                <option>Junho  de 2026</option>
+                <option>Julho  de 2026</option>
+                <option>Agosto  de 2026</option>
+                <option>Setembro  de 2026</option>
+                <option>Outubro  de 2026</option>
+                <option>Novembro de 2026</option>
+                <option>Dezembro  de 2026</option>
+            </select>
+        </section>
+
+        <section class="resumos">
+            <div class="cartao">
+                <p>Receita total</p>
+                <strong>R$ {{receitaTotal}}</strong>
+                <small>+ {{porReceita}}%</small>
+            </div>
+            <div class="cartao despesa">
+                <p>Despesas totais</p>
+                <strong>R$ {{despesasTotal}}</strong>
+                <small>- {{porDespesas}}%</small>
+            </div>
+            <div class="cartao">
+                <p>Lucro líquido</p>
+                <strong>R$ {{lucroLiquido}}</strong>
+                <small>+ {{porLucro}}%</small>
+            </div>
+        </section>
+
+        <section class="graficos">
+            <div class="painel">
+                <h2>Faturamento dos últimos 7 dias</h2>
+                <div class="grafico">
+                    <div class="valores">
+                        <span>R$ 4.000</span>
+                        <span>R$ 3.000</span>
+                        <span>R$ 2.000</span>
+                        <span>R$ 1.000</span>
+                        <span>R$ 0</span>
+                    </div>
+                    <div class="barras">
+                        <div class="coluna"><div style="height: 43%"></div><span>10/10</span></div>
+                        <div class="coluna"><div style="height: 65%"></div><span>11/10</span></div>
+                        <div class="coluna"><div style="height: 50%"></div><span>12/10</span></div>
+                        <div class="coluna"><div style="height: 78%"></div><span>13/10</span></div>
+                        <div class="coluna"><div style="height: 58%"></div><span>14/10</span></div>
+                        <div class="coluna"><div style="height: 83%"></div><span>15/10</span></div>
+                        <div class="coluna"><div style="height: 95%"></div><span>16/10</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="painel">
+                <h2>Despesas por categoria</h2>
+                <div class="categorias">
+                    <div class="grafico-redondo"></div>
+                    <ul>
+                        <li><span class="cor fornecedores"></span>Fornecedores <b>45%</b></li>
+                        <li><span class="cor marketing"></span>Marketing <b>20%</b></li>
+                        <li><span class="cor salarios"></span>Salários <b>15%</b></li>
+                        <li><span class="cor outros"></span>Outros <b>20%</b></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="painel movimentacoes">
+            <h2>Movimentações recentes</h2>
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Descrição</th>
+                            <th>Categoria</th>
+                            <th>Valor</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>16/10/2024</td>
+                            <td>Venda de produtos</td>
+                            <td>Vendas</td>
+                            <td class="entrada">+R$ 249,80</td>
+                            <td class="entrada">Receita</td>
+                        </tr>
+                        <tr>
+                            <td>15/10/2024</td>
+                            <td>Compra de produtos</td>
+                            <td>Fornecedores</td>
+                            <td class="saida">-R$ 1.250,00</td>
+                            <td class="saida">Despesa</td>
+                        </tr>
+                        <tr>
+                            <td>14/10/2024</td>
+                            <td>Energia elétrica</td>
+                            <td>Contas fixas</td>
+                            <td class="saida">-R$ 320,00</td>
+                            <td class="saida">Despesa</td>
+                        </tr>
+                        <tr>
+                            <td>13/10/2024</td>
+                            <td>Venda de produtos</td>
+                            <td>Vendas</td>
+                            <td class="entrada">+R$ 189,90</td>
+                            <td class="entrada">Receita</td>
+                        </tr>
+                        <tr>
+                            <td>12/10/2024</td>
+                            <td>Marketing Digital</td>
+                            <td>Marketing</td>
+                            <td class="saida">-R$ 150,00</td>
+                            <td class="saida">Despesa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
