@@ -1,0 +1,125 @@
+<app-menu></app-menu>
+
+    <main class="conteudo">
+        <header class="topo">
+            <input type="text" placeholder="Buscar no sistema...">
+            <div class="usuario">Olá, Administrador</div>
+        </header>
+
+        <section class="boas-vindas">
+            <h1>Bem-vindo(a)!</h1>
+            <p>Aqui você acompanha o resumo do seu negócio.</p>
+        </section>
+
+        <section class="banner">
+            <div class="texto-banner">
+                <h2>O Boticário<br>é beleza que transforma</h2>
+                <p>Mais do que produtos, entregamos<br>
+                autocuidado, autoestima e bem-estar.</p>
+                <button>Conheça nossos produtos</button>
+            </div>
+
+            <div class="frascos">
+                <div class="frasco verde"><div></div></div>
+                <div class="frasco rosa"><div></div></div>
+                <div class="frasco claro"><div></div></div>
+            </div>
+        </section>
+
+        <section class="resumos">
+            <div class="cartao">
+                <h3>Clientes</h3>
+                <strong>{{qtdClientes}}</strong>
+                <p>Clientes cadastrados</p>
+            </div>
+
+            <div class="cartao">
+                <h3>Vendas</h3>
+                <strong>{{qtdVendas}}</strong>
+                <p>Vendas no mês</p>
+            </div>
+
+            <div class="cartao">
+                <h3>Financeiro</h3>
+                <strong>R$ 12.850,00</strong>
+                <p>Faturamento do mês</p>
+                <small>+ 15%</small>
+            </div>
+
+            <div class="cartao">
+                <h3>Inventário</h3>
+                <strong>{{qtdEstoque}}</strong>
+                <p>Produtos em estoque</p>
+            </div>
+        </section>
+
+        <section class="parte-inferior">
+            <div class="vendas">
+                <div class="titulo-tabela">
+                    <h3>Últimas vendas</h3>
+                    <a href="#">Ver todas</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Data</th>
+                            <th>Produto(s)</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mariana Silva</td>
+                            <td>16/10/2024</td>
+                            <td>Floratta + Hidratante</td>
+                            <td>R$ 189,90</td>
+                        </tr>
+                        <tr>
+                            <td>João Santos</td>
+                            <td>15/10/2024</td>
+                            <td>Malbec</td>
+                            <td>R$ 159,90</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Costa</td>
+                            <td>15/10/2024</td>
+                            <td>Nativa SPA Ameixa</td>
+                            <td>R$ 129,90</td>
+                        </tr>
+                        <tr>
+                            <td>Lucas Oliveira</td>
+                            <td>14/10/2024</td>
+                            <td>Kit Presente Cuide-se Bem</td>
+                            <td>R$ 99,90</td>
+                        </tr>
+                        <tr>
+                            <td>Fernanda Lima</td>
+                            <td>14/10/2024</td>
+                            <td>Egeo Dolce</td>
+                            <td>R$ 139,90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="coluna-lateral">
+                <div class="acoes">
+                    <h3>Ações rápidas</h3>
+                    <div class="botoes">
+                        <button>Cadastrar cliente</button>
+                        <button>Registrar venda</button>
+                        <button>Atualizar estoque</button>
+                        <button>Ver fluxo financeiro</button>
+                    </div>
+                </div>
+
+                <div class="mensagem">
+                    <h3>Juntos por um<br>mundo mais bonito</h3>
+                    <p>O Boticário e você, por um<br>futuro mais sustentável.</p>
+                    <button>Saiba mais</button>
+                </div>
+            </div>
+        </section>
+    </main>

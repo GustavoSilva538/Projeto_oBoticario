@@ -1,0 +1,79 @@
+/* Estilos principais do Menu */
+.menu {
+    width: 235px;
+    min-height: 100vh;
+    background-color: #0d3b2f;
+    color: white;
+    padding: 28px 18px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+}
+
+.menu h2 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.menu nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 13px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.menu nav a:hover,
+.menu nav .ativo {
+    background-color: #2b6b53;
+}
+
+/* Estilos da frase no rodapé do menu */
+.frase {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #d7e4dc;
+}
+
+.frase p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.frase small {
+    font-size: 10px;
+}
+
+/* Responsividade para telas menores (ex: celulares) */
+@media (max-width: 700px) {
+    .menu {
+        position: static;
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .menu h2 {
+        margin-bottom: 12px;
+    }
+
+    .menu nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu nav a {
+        padding: 10px;
+    }
+
+    .frase {
+        display: none;
+    }
+}

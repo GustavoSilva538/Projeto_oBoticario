@@ -1,0 +1,175 @@
+<div class="app">
+    
+<app-menu></app-menu>
+
+    <!-- ===== Conteúdo Principal ===== -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="search">
+          <input type="search" placeholder="Buscar no sistema...">
+        </div>
+        <div class="user">
+          <span class="avatar">A</span>
+          <span>Olá, Administrador</span>
+        </div>
+      </header>
+
+      <!-- Cabeçalho da Página -->
+      <div class="page-header">
+        <div>
+          <h1>Inventário</h1>
+          <p>Gerencie os produtos e o estoque da sua loja.</p>
+        </div>
+        <button class="btn-adicionar" type="button">+ Adicionar produto</button>
+      </div>
+
+      <!-- Cards de Estatísticas do Estoque -->
+      <section class="stats">
+        <div class="stat">
+          <div class="stat-icon">📦</div>
+          <strong>320</strong>
+          <span class="stat-label">Produtos em estoque</span>
+        </div>
+        <div class="stat">
+          <div class="stat-icon alerta">⚠️</div>
+          <strong>12</strong>
+          <span class="stat-label">Produtos com estoque baixo</span>
+        </div>
+        <div class="stat">
+          <div class="stat-icon perigo">❌</div>
+          <strong>5</strong>
+          <span class="stat-label">Produtos sem estoque</span>
+        </div>
+      </section>
+
+      <!-- Painel da Tabela e Filtros -->
+      <section class="panel">
+        
+        <div class="filters">
+          <div class="search-table">
+            <input type="search" placeholder="Buscar por nome, código...">
+          </div>
+          <div class="select">
+            <select>
+              <option>Todas as categorias</option>
+              <option>Perfumaria</option>
+              <option>Cuidados Pessoais</option>
+              <option>Cabelos</option>
+              <option>Kits</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Tabela de Produtos -->
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Categoria</th>
+                <th>Estoque</th>
+                <th>Valor</th>
+                <th class="col-acoes">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="product-info">
+                    <span class="thumb" style="background-color: #E9A9A5;"></span>
+                    Floratta Des. Colônia
+                  </div>
+                </td>
+                <td>Perfumaria</td>
+                <td>35</td>
+                <td>R$ 189,90</td>
+                <td class="col-acoes">
+                  <button class="btn-acao" type="button" title="Editar">✏️</button>
+                  <button class="btn-acao danger" type="button" title="Excluir">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-info">
+                    <span class="thumb" style="background-color: #1A1A1A;"></span>
+                    Malbec Des. Colônia
+                  </div>
+                </td>
+                <td>Perfumaria</td>
+                <td>28</td>
+                <td>R$ 159,90</td>
+                <td class="col-acoes">
+                  <button class="btn-acao" type="button" title="Editar">✏️</button>
+                  <button class="btn-acao danger" type="button" title="Excluir">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-info">
+                    <span class="thumb" style="background-color: #8E2F3E;"></span>
+                    Nativa SPA Ameixa
+                  </div>
+                </td>
+                <td>Cuidados Pessoais</td>
+                <td><span class="badge-alerta">12</span></td>
+                <td>R$ 129,90</td>
+                <td class="col-acoes">
+                  <button class="btn-acao" type="button" title="Editar">✏️</button>
+                  <button class="btn-acao danger" type="button" title="Excluir">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-info">
+                    <span class="thumb" style="background-color: #F0B5B0;"></span>
+                    Kit Presente Cuide-se Bem
+                  </div>
+                </td>
+                <td>Kits</td>
+                <td>18</td>
+                <td>R$ 99,90</td>
+                <td class="col-acoes">
+                  <button class="btn-acao" type="button" title="Editar">✏️</button>
+                  <button class="btn-acao danger" type="button" title="Excluir">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-info">
+                    <span class="thumb" style="background-color: #D9344A;"></span>
+                    Egeo Dolce
+                  </div>
+                </td>
+                <td>Perfumaria</td>
+                <td>22</td>
+                <td>R$ 139,90</td>
+                <td class="col-acoes">
+                  <button class="btn-acao" type="button" title="Editar">✏️</button>
+                  <button class="btn-acao danger" type="button" title="Excluir">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product-info">
+                    <span class="thumb" style="background-color: #242424;"></span>
+                    Shampoo Nativa SPA
+                  </div>
+                </td>
+                <td>Cabelos</td>
+                <td>40</td>
+                <td>R$ 69,90</td>
+                <td class="col-acoes">
+                  <button class="btn-acao" type="button" title="Editar">✏️</button>
+                  <button class="btn-acao danger" type="button" title="Excluir">🗑️</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+    </div>
+  </div>

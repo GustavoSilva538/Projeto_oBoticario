@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f5ef;
+    color: #102e25;
+    display: flex;
+}
+
+/* Menu que fica do lado esquerdo */
+.menu {
+    width: 235px;
+    min-height: 100vh;
+    background-color: #0d3b2f;
+    color: white;
+    padding: 28px 18px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menu h2 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.menu nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 13px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.menu nav a:hover,
+.menu nav .ativo {
+    background-color: #2b6b53;
+}
+
+.frase {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #d7e4dc;
+}
+
+.frase p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.frase small {
+    font-size: 10px;
+}
+
+.conteudo {
+    margin-left: 235px;
+    padding: 22px 36px;
+    width: calc(100% - 235px);
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.topo input {
+    width: 38%;
+    padding: 11px 14px;
+    border: 1px solid #e4dfd5;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.usuario {
+    font-size: 13px;
+}
+
+.boas-vindas {
+    margin-bottom: 24px;
+}
+
+.boas-vindas h1 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+.boas-vindas p {
+    color: #6c7d76;
+    font-size: 14px;
+}
+
+.banner {
+    background: linear-gradient(110deg, #0d352a, #4b805c);
+    color: white;
+    min-height: 180px;
+    border-radius: 13px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+.texto-banner h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.texto-banner p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.texto-banner button,
+.mensagem button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 5px;
+}
+
+.frascos {
+    display: flex;
+    align-items: end;
+    gap: 28px;
+    padding-right: 30px;
+}
+
+.frasco {
+    width: 68px;
+    height: 125px;
+    border-radius: 13px 13px 10px 10px;
+    position: relative;
+}
+
+.frasco div {
+    position: absolute;
+    top: -22px;
+    left: 20px;
+    width: 28px;
+    height: 23px;
+    border-radius: 4px 4px 0 0;
+    background-color: #1b1b19;
+}
+
+.frasco.verde {
+    background-color: #061f18;
+    height: 137px;
+}
+
+.frasco.rosa {
+    background-color: #c66f70;
+}
+
+.frasco.rosa div {
+    background-color: #f1d0c9;
+}
+
+.frasco.claro {
+    background-color: #e9a59e;
+    height: 93px;
+}
+
+.frasco.claro div {
+    background-color: #cba96b;
+}
+
+.resumos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.cartao {
+    background-color: white;
+    border: 1px solid #e7e1d8;
+    border-radius: 11px;
+    padding: 18px 16px;
+}
+
+.cartao h3 {
+    color: #24664f;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.cartao strong {
+    display: block;
+    color: #102e25;
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.cartao p {
+    color: #687b73;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.cartao small {
+    color: #24845e;
+    font-size: 12px;
+}
+
+.parte-inferior {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 18px;
+}
+
+.vendas {
+    background-color: white;
+    border: 1px solid #e7e1d8;
+    border-radius: 11px;
+    padding: 20px 18px;
+    overflow-x: auto;
+}
+
+.titulo-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.titulo-tabela h3,
+.acoes h3 {
+    font-size: 15px;
+}
+
+.titulo-tabela a {
+    color: #173f31;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #e8e2d9;
+    white-space: nowrap;
+}
+
+th {
+    color: #6c7d76;
+    font-weight: normal;
+}
+
+.coluna-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.acoes {
+    background-color: #f0eee6;
+    border: 1px solid #e7e1d8;
+    border-radius: 11px;
+    padding: 20px;
+}
+
+.acoes h3 {
+    margin-bottom: 12px;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+.botoes button {
+    background-color: white;
+    border: 1px solid #e6e0d6;
+    border-radius: 7px;
+    padding: 12px 7px;
+    font-size: 11px;
+    color: #183b2f;
+}
+
+.mensagem {
+    background-color: #0d3b2f;
+    color: white;
+    border-radius: 11px;
+    padding: 20px;
+}
+
+.mensagem h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.mensagem p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1050px) {
+    .resumos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .parte-inferior {
+        grid-template-columns: 1fr;
+    }
+
+    .frascos {
+        gap: 15px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        display: block;
+    }
+
+    .menu {
+        position: static;
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .menu h2 {
+        margin-bottom: 12px;
+    }
+
+    .menu nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu nav a {
+        padding: 10px;
+    }
+
+    .frase {
+        display: none;
+    }
+
+    .conteudo {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 14px;
+    }
+
+    .topo input {
+        width: 60%;
+    }
+
+    .banner {
+        padding: 22px;
+    }
+
+    .texto-banner h2 {
+        font-size: 23px;
+    }
+
+    .frascos {
+        display: none;
+    }
+
+    .resumos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cartao {
+        padding: 14px 10px;
+    }
+
+    .cartao strong {
+        font-size: 18px;
+    }
+}
