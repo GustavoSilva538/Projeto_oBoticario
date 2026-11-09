@@ -1,0 +1,158 @@
+
+    <app-menu></app-menu>
+
+    <main class="conteudo">
+
+        <header class="topo">
+            <input type="search" placeholder="Buscar no sistema...">
+            <p>Olá, Administrador</p>
+        </header>
+
+        <section class="cabecalho">
+            <div>
+                <h1>Clientes</h1>
+                <p>Gerencie o cadastro e consulte os clientes da sua loja.</p>
+            </div>
+
+            <button type="button">+ Cadastrar cliente</button>
+        </section>
+
+        <section class="painel">
+
+            <div class="filtros">
+                <input type="search" placeholder="Buscar cliente por nome...">
+
+                <select>
+                    <option>Todos os tipos</option>
+                    <option>Pessoa física</option>
+                    <option>Pessoa jurídica</option>
+                </select>
+
+                <select>
+                    <option>Nome (A-Z)</option>
+                    <option>Nome (Z-A)</option>
+                </select>
+            </div>
+
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Tipo</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Mariana Silva</td>
+                            <td>123.456.789-01</td>
+                            <td>(11) 98765-4321</td>
+                            <td>Pessoa física</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>João Santos</td>
+                            <td>987.654.321-00</td>
+                            <td>(11) 91234-5678</td>
+                            <td>Pessoa física</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Ana Costa</td>
+                            <td>456.123.789-00</td>
+                            <td>(11) 99876-5432</td>
+                            <td>Pessoa física</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Lucas Oliveira</td>
+                            <td>321.654.987-00</td>
+                            <td>(11) 93456-7890</td>
+                            <td>Pessoa física</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Fernanda Lima</td>
+                            <td>789.456.123-00</td>
+                            <td>(11) 97654-3210</td>
+                            <td>Pessoa física</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Carlos Almeida</td>
+                            <td>654.987.321-00</td>
+                            <td>(11) 95543-2109</td>
+                            <td>Pessoa física</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Beatriz Souza</td>
+                            <td>258.741.963-00</td>
+                            <td>(11) 98231-5467</td>
+                            <td>Pessoa jurídica</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Rafael Pereira</td>
+                            <td>963.852.741-00</td>
+                            <td>(11) 97021-3345</td>
+                            <td>Pessoa física</td>
+                            <td>
+                                <button class="editar" type="button">Editar</button>
+                                <button class="excluir" type="button">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="painel detalhes">
+            <h2>Detalhes do cliente</h2>
+
+            <div class="dados">
+                <p><strong>Nome:</strong> Mariana Silva</p>
+                <p><strong>CPF:</strong> 123.456.789-01</p>
+                <p><strong>Telefone:</strong> (11) 98765-4321</p>
+                <p><strong>E-mail:</strong> mariemail.com</p>
+                <p><strong>Tipo:</strong> Pessoa física</p>
+                <p><strong>Cliente desde:</strong> 16/10/2024</p>
+            </div>
+
+            <button type="button">Editar cadastro</button>
+        </section>
+
+    </main>
+

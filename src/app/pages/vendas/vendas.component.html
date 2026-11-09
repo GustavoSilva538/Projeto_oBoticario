@@ -1,0 +1,304 @@
+    <app-menu></app-menu>
+
+    <main class="conteudo">
+
+        <header class="topo">
+            <input type="text" placeholder="Buscar no sistema...">
+            <div class="usuario">Olá, Administrador</div>
+        </header>
+
+        <section class="boas-vindas">
+            <h1>Vendas</h1>
+            <p>Registre novas vendas e acompanhe o histórico.</p>
+        </section>
+
+        <section class="resumos">
+
+            <div class="cartao">
+                <h3>Vendas no mês</h3>
+                <strong>48</strong>
+                <p>Total de vendas realizadas</p>
+                <small>+ 8%</small>
+            </div>
+
+            <div class="cartao">
+                <h3>Faturamento</h3>
+                <strong>R$ 12.850,00</strong>
+                <p>Faturamento do mês</p>
+                <small>+ 15%</small>
+            </div>
+
+            <div class="cartao">
+                <h3>Ticket médio</h3>
+                <strong>R$ 89,90</strong>
+                <p>Valor médio por venda</p>
+                <small>+ 6%</small>
+            </div>
+
+        </section>
+
+        <section class="parte-inferior">
+
+            <div class="vendas">
+
+                <h3>Registrar venda</h3>
+
+                <form class="form-venda">
+
+                    <label for="cliente">Cliente</label>
+                    <select id="cliente" required>
+                        <option value="">Selecione um cliente</option>
+                        <option>Mariana Silva</option>
+                        <option>João Santos</option>
+                        <option>Ana Costa</option>
+                        <option>Lucas Oliveira</option>
+                        <option>Fernanda Lima</option>
+                    </select>
+
+                    <label for="produto">Produto</label>
+                    <select id="produto" required>
+                        <option value="">Selecione um produto</option>
+                        <option value="189.90">Floratta Des. Colônia - R$ 189,90</option>
+                        <option value="159.90">Malbec Des. Colônia - R$ 159,90</option>
+                        <option value="129.90">Nativa SPA Ameixa - R$ 129,90</option>
+                        <option value="59.90">Hidratante Corporal - R$ 59,90</option>
+                        <option value="139.90">Egeo Dolce - R$ 139,90</option>
+                    </select>
+
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade" min="1" value="1" required>
+
+                    <button type="button" onclick="adicionarProduto()">
+                        Adicionar ao carrinho
+                    </button>
+
+                </form>
+
+                <h3 class="titulo-carrinho">Carrinho</h3>
+
+                <div id="carrinho">
+                    <p class="vazio">Nenhum produto adicionado.</p>
+                </div>
+
+                <div class="total">
+                    <span>Total:</span>
+                    <strong id="total">R$ 0,00</strong>
+                </div>
+
+                <button class="finalizar" onclick="finalizarVenda()">
+                    Finalizar venda
+                </button>
+
+            </div>
+
+            <div class="coluna-lateral">
+
+                <div class="acoes">
+                    <h3>Ações rápidas</h3>
+
+                    <div class="botoes">
+                        <button onclick="limparCarrinho()">
+                            Limpar carrinho
+                        </button>
+
+                        <button onclick="window.print()">
+                            Imprimir página
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mensagem">
+                    <h3>Juntos por um<br>mundo mais bonito</h3>
+                    <p>O Boticário e você, por um futuro mais sustentável.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="vendas historico">
+
+            <div class="titulo-tabela">
+                <h3>Últimas vendas</h3>
+                <a href="#">Ver todas</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Data</th>
+                        <th>Produto(s)</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Mariana Silva</td>
+                        <td>16/10/2024</td>
+                        <td>Floratta + Hidratante</td>
+                        <td>R$ 189,90</td>
+                        <td><span class="status">Concluída</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>João Santos</td>
+                        <td>15/10/2024</td>
+                        <td>Malbec</td>
+                        <td>R$ 159,90</td>
+                        <td><span class="status">Concluída</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ana Costa</td>
+                        <td>15/10/2024</td>
+                        <td>Nativa SPA Ameixa</td>
+                        <td>R$ 129,90</td>
+                        <td><span class="status">Concluída</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Lucas Oliveira</td>
+                        <td>14/10/2024</td>
+                        <td>Kit Presente Cuide-se Bem</td>
+                        <td>R$ 99,90</td>
+                        <td><span class="status">Concluída</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Fernanda Lima</td>
+                        <td>14/10/2024</td>
+                        <td>Egeo Dolce</td>
+                        <td>R$ 139,90</td>
+                        <td><span class="status">Concluída</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <script>
+        let produtos = [];
+
+        function adicionarProduto() {
+            let cliente = document.getElementById("cliente").value;
+            let selectProduto = document.getElementById("produto");
+            let quantidade = Number(document.getElementById("quantidade").value);
+
+            if (cliente === "") {
+                alert("Selecione um cliente.");
+                return;
+            }
+
+            if (selectProduto.value === "") {
+                alert("Selecione um produto.");
+                return;
+            }
+
+            if (quantidade < 1 || !Number.isInteger(quantidade)) {
+                alert("Informe uma quantidade válida.");
+                return;
+            }
+
+            let nome = selectProduto.options[selectProduto.selectedIndex].text;
+            nome = nome.split(" - R$")[0];
+
+            let preco = Number(selectProduto.value);
+
+            produtos.push({
+                nome: nome,
+                preco: preco,
+                quantidade: quantidade
+            });
+
+            mostrarCarrinho();
+        }
+
+        function mostrarCarrinho() {
+            let carrinho = document.getElementById("carrinho");
+            let total = 0;
+
+            carrinho.innerHTML = "";
+
+            if (produtos.length === 0) {
+                carrinho.innerHTML =
+                    '<p class="vazio">Nenhum produto adicionado.</p>';
+            }
+
+            produtos.forEach(function(produto, indice) {
+                let subtotal = produto.preco * produto.quantidade;
+                total += subtotal;
+
+                let item = document.createElement("div");
+                item.className = "item-carrinho";
+
+                let nome = document.createElement("span");
+                nome.textContent = produto.quantidade + "x " + produto.nome;
+
+                let preco = document.createElement("strong");
+                preco.textContent = subtotal.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL"
+                });
+
+                let remover = document.createElement("button");
+                remover.textContent = "X";
+                remover.type = "button";
+                remover.setAttribute("aria-label", "Remover " + produto.nome);
+
+                remover.onclick = function() {
+                    produtos.splice(indice, 1);
+                    mostrarCarrinho();
+                };
+
+                item.appendChild(nome);
+                item.appendChild(preco);
+                item.appendChild(remover);
+
+                carrinho.appendChild(item);
+            });
+
+            document.getElementById("total").textContent =
+                total.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL"
+                });
+        }
+
+        function limparCarrinho() {
+            produtos = [];
+            mostrarCarrinho();
+        }
+
+        function finalizarVenda() {
+            if (produtos.length === 0) {
+                alert("Adicione pelo menos um produto ao carrinho.");
+                return;
+            }
+
+            let cliente = document.getElementById("cliente").value;
+
+            let total = produtos.reduce(function(soma, produto) {
+                return soma + produto.preco * produto.quantidade;
+            }, 0);
+
+            alert(
+                "Venda registrada na demonstração!\n" +
+                "Cliente: " + cliente + "\n" +
+                "Total: " + total.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL"
+                })
+            );
+
+            limparCarrinho();
+            document.getElementById("cliente").value = "";
+            document.getElementById("produto").value = "";
+            document.getElementById("quantidade").value = 1;
+        }
+    </script>
+

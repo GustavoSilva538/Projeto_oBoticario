@@ -1,0 +1,492 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #F8F6F1;
+    color: #1C2B24;
+    font-size: 14px;
+}
+
+/* Menu lateral */
+
+.menu {
+    width: 240px;
+    height: 100vh;
+    background: #0F3B2E;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu h2 {
+    font-size: 22px;
+    margin: 0 0 35px;
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu nav a {
+    color: white;
+    text-decoration: none;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.menu nav a:hover,
+.menu nav a.ativo {
+    background: #2B6A52;
+}
+
+.frase {
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+
+.frase p {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.frase small {
+    display: block;
+    margin-top: 12px;
+    font-size: 11px;
+}
+
+/* Conteúdo principal */
+
+.conteudo {
+    margin-left: 240px;
+    padding: 25px 35px;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.topo input {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 1px solid #E7E3DA;
+    border-radius: 8px;
+    background: white;
+    outline: none;
+}
+
+.topo input:focus {
+    border-color: #2E7D5E;
+}
+
+.usuario {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Títulos */
+
+.boas-vindas {
+    margin-bottom: 25px;
+}
+
+.boas-vindas h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin: 0 0 8px;
+}
+
+.boas-vindas p {
+    color: #6E7B74;
+}
+
+/* Cartões de resumo */
+
+.resumos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.cartao {
+    background: white;
+    padding: 22px;
+    border: 1px solid #E7E3DA;
+    border-radius: 12px;
+}
+
+.cartao h3 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #6E7B74;
+    margin: 0 0 15px;
+}
+
+.cartao strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.cartao p {
+    color: #6E7B74;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.cartao small {
+    color: #2E7D5E;
+    font-weight: bold;
+}
+
+/* Área de vendas */
+
+.parte-inferior {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.vendas,
+.acoes,
+.mensagem {
+    background: white;
+    border: 1px solid #E7E3DA;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.vendas h3,
+.acoes h3 {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+/* Formulário */
+
+.form-venda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-venda label {
+    font-size: 13px;
+    color: #6E7B74;
+    margin-top: 5px;
+}
+
+.form-venda input,
+.form-venda select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #E7E3DA;
+    border-radius: 7px;
+    background: white;
+    color: #1C2B24;
+    font-size: 13px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.form-venda button,
+.finalizar {
+    background: #1F5C46;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 13px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.form-venda button:hover,
+.finalizar:hover {
+    background: #17493A;
+}
+
+.titulo-carrinho {
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Carrinho */
+
+#carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F8F6F1;
+    border: 1px solid #E7E3DA;
+    border-radius: 7px;
+    padding: 12px;
+}
+
+.item-carrinho span {
+    flex: 1;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+}
+
+.item-carrinho strong {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.item-carrinho button {
+    background: #FCE8E8;
+    color: #D64545;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 9px;
+    font-weight: bold;
+}
+
+.vazio {
+    color: #6E7B74;
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E7E3DA;
+    margin-top: 20px;
+    padding-top: 18px;
+}
+
+.total span {
+    font-size: 15px;
+}
+
+.total strong {
+    font-size: 22px;
+}
+
+.finalizar {
+    width: 100%;
+    margin-top: 18px;
+}
+
+/* Coluna lateral */
+
+.coluna-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botoes button {
+    background: #F1EFE7;
+    border: 1px solid #E7E3DA;
+    color: #1F5C46;
+    border-radius: 7px;
+    padding: 12px;
+    text-align: left;
+}
+
+.botoes button:hover {
+    background: #DDF1E6;
+}
+
+.mensagem {
+    background: #DDF1E6;
+    border: none;
+}
+
+.mensagem h3 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.mensagem p {
+    color: #526B5E;
+    line-height: 1.6;
+}
+
+/* Histórico de vendas */
+
+.historico {
+    margin-top: 25px;
+    overflow-x: auto;
+}
+
+.titulo-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-tabela a {
+    color: #1F5C46;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.titulo-tabela a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 13px 10px;
+    border-bottom: 1px solid #E7E3DA;
+    font-size: 12px;
+}
+
+th {
+    color: #6E7B74;
+    font-weight: normal;
+}
+
+tbody tr:hover {
+    background: #FBFAF6;
+}
+
+.status {
+    background: #DDF1E6;
+    color: #1F7A52;
+    padding: 5px 9px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1100px) {
+    .conteudo {
+        padding: 25px 20px;
+    }
+
+    .parte-inferior {
+        grid-template-columns: 1fr;
+    }
+
+    .coluna-lateral {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cartao strong {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 750px) {
+    .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .menu h2 {
+        margin-bottom: 15px;
+    }
+
+    .menu nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu nav a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .frase {
+        display: none;
+    }
+
+    .conteudo {
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+
+    .topo {
+        margin-bottom: 25px;
+    }
+
+    .topo input {
+        width: 65%;
+    }
+
+    .usuario {
+        font-size: 12px;
+    }
+
+    .boas-vindas h1 {
+        font-size: 27px;
+    }
+
+    .resumos {
+        grid-template-columns: 1fr;
+    }
+
+    .parte-inferior {
+        grid-template-columns: 1fr;
+    }
+
+    .coluna-lateral {
+        grid-template-columns: 1fr;
+    }
+
+    .vendas,
+    .acoes,
+    .mensagem {
+        padding: 16px;
+    }
+
+    .historico {
+        margin-top: 20px;
+    }
+}
