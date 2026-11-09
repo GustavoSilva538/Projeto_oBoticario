@@ -1,6 +1,3 @@
-# ========= Dockerfile ================#
-
-# ---------- etapa 1: gera o build do Angular ----------
 FROM node:22-alpine AS build
 WORKDIR /app
 
